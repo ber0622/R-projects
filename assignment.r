@@ -37,3 +37,16 @@ lines(x, y, type = "l", lty = 1)
 #lty:ine types. Line types can either be specified as an integer 
 #(0=blank, 1=solid (default), 2=dashed, 3=dotted, 4=dotdash, 5=longdash, 6=twodash)
 # or as one of the character strings “blank”, “solid”, “dashed”, “dotted”, “dotdash”, “longdash”, or “twodash”, where “blank” uses ‘invisible lines’ (i.e., does not draw them).
+
+#LiNePlOt=function(x,y){
++ if (x >= -3 & x <= 3)
++ {
++ y = x^3 - 3*x + 2
++ }
++ a=plot(x,y,type='l',lty=1)
++ b=lines(x,y,type='l',lty=1)
++ return(a)}
+> LiNePlOt(1)
+NULL
+> LiNePlOt(x)
+Error in if (x >= -3 & x <= 3) { : the condition has length > 1
