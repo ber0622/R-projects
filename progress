@@ -176,6 +176,7 @@ det(A)  #DETERMINANT
 > c
 
 #assignment as at 24/01/23
+#solve for x, y and z
  matrix1=matrix(c(2,2,6,1,6,8,3,8,18),nrow=3,ncol=3)
 > matrix1
      [,1] [,2] [,3]
@@ -192,8 +193,9 @@ det(A)  #DETERMINANT
 
 
 #31/01/2023
-K
-     [,1] [,2]
+K   #K^n = eigen vector %*% diag matrix of eigen values %*% inverse of eigen vector
+
+[,1] [,2]
 [1,]    2   -4
 [2,]   -1   -1
 > val=eigen(K)$values
@@ -211,8 +213,8 @@ K
       [,1] [,2]
 [1,] 59049    0
 [2,]     0 1024
-Apow10=vec%*%d^n%*%vec1
-Apow10
+Kpow10=vec%*%d^n%*%vec1
+Kpow10
        [,1]   [,2]
 [1,]  47444 -46420
 [2,] -11605  12629
@@ -272,8 +274,9 @@ $numberofstudents
 $Year
 [1] 1 2 3 4
 
- s/no=c(1,2,3)
-Error in s/no = c(1, 2, 3) : object 's' not found
+ #s/no=c(1,2,3)
+#Error in s/no = c(1, 2, 3) : object 's' not found
+
 s_no=c(1,2,3)
 Name=c("John","Marcus","Philomena")
 STA2100=c(57,65,48)
@@ -310,8 +313,8 @@ The following objects are masked _by_ .GlobalEnv:
 > STA2101
 [1] 76 67 66
 
-07/02/2023 : 3rd class
-user defined functions
+#07/02/2023 : 3rd class
+#user defined functions
 
 Mean=function(x){ #user defined mean
 sum(x)/length(x)
@@ -345,7 +348,6 @@ annuity=(1-v)/ip
 x=A/(p*annuity)
 return(x)
 }
-ls()
 
 #example
 sciences=function(b,c,p){
@@ -356,7 +358,7 @@ t=c(a.b,a.c,a.p)
 return(t)
 }
 
-or
+#or
  
 sciences=function(b,c,p){
 a.b=mean(b)
@@ -404,7 +406,7 @@ if(t==0 & z==5)
 y=t*3+z^2
 }else{
 y=7
-}
+} #y=7
 
 #example 2
 t=3
@@ -415,4 +417,4 @@ y=5*t
 }else{
 y=z^2
 }
-y
+y  #y=25
