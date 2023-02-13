@@ -17,3 +17,23 @@ y2 <- c(3.5, 4.6, 2.5, 3.2)
 # Plotting a line
 lines(x2, y2, col = "red",
 	lwd = 2, lty = 1)
+
+#R base functions: plot() and lines()
+#The simplified format of plot() and lines() is as follow.
+plot(x, y, type = "l", lty = 1)
+lines(x, y, type = "l", lty = 1)
+
+#x, y: coordinate vectors of points to join
+
+#type: character indicating the type of plotting. Allowed values are:
+#“p” for points
+#“l” for lines
+#“b” for both points and lines
+#“c” for empty points joined by lines
+#“o” for overplotted points and lines
+#“s” and “S” for stair steps
+#“n” does not produce any points or lines
+
+#lty:ine types. Line types can either be specified as an integer 
+#(0=blank, 1=solid (default), 2=dashed, 3=dotted, 4=dotdash, 5=longdash, 6=twodash)
+# or as one of the character strings “blank”, “solid”, “dashed”, “dotted”, “dotdash”, “longdash”, or “twodash”, where “blank” uses ‘invisible lines’ (i.e., does not draw them).
